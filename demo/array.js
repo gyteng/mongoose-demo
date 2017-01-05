@@ -37,6 +37,7 @@ const ArraySchema2 = mongoose.model('ArraySchema2', {
     foo: String,
     bar: { type: Date, default: Date.now },
   }]
+  // 定义数组内部的结构
 });
 
 const as1 = new ArraySchema2({
