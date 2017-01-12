@@ -46,3 +46,10 @@ val1.type = 'A';
 val1.phone = '150123412341';
 val1.save().then(console.log).catch(console.log);
 // phone 格式错误
+
+Validation.findOneAndUpdate({
+  name: 'abc',
+}, {
+  phone: '12354',
+}).then(console.log).catch(console.log);
+// 修改不受影响，不检测phone字段的有效性
